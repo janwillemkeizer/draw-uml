@@ -1,0 +1,16 @@
+{
+  "umlVersion": "2.5.1",
+  "diagramKind": "interaction-overview",
+  "frame": { "kind": "sd", "name": "BorrowSession" },
+  "nodes": [
+    { "id": "start", "metaclass": "InitialNode", "kind": "initial", "x": 160, "y": 30 },
+    { "id": "id", "metaclass": "InteractionUse", "name": "IdentifyMember", "x": 90, "y": 80 },
+    { "id": "borrow", "metaclass": "InteractionUse", "name": "BorrowCopy", "x": 90, "y": 180 },
+    { "id": "end", "metaclass": "ActivityFinalNode", "kind": "activityFinal", "x": 160, "y": 280 }
+  ],
+  "edges": [
+    { "metaclass": "ControlFlow", "source": "start", "target": "id" },
+    { "metaclass": "ControlFlow", "source": "id", "target": "borrow" },
+    { "metaclass": "ControlFlow", "source": "borrow", "target": "end" }
+  ]
+}

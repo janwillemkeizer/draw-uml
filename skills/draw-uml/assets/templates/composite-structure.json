@@ -1,0 +1,13 @@
+{
+  "umlVersion": "2.5.1",
+  "diagramKind": "composite-structure",
+  "frame": { "kind": "class", "name": "Car" },
+  "nodes": [
+    { "id": "Car", "metaclass": "Class", "name": "Car", "x": 40, "y": 40, "width": 320, "height": 160 },
+    { "id": "engine", "metaclass": "Property", "name": "engine : Engine", "x": 70, "y": 90 },
+    { "id": "wheel", "metaclass": "Property", "name": "wheel : Wheel [4]", "x": 220, "y": 90 }
+  ],
+  "edges": [
+    { "metaclass": "Connector", "source": "engine", "target": "wheel", "name": "axle" }
+  ]
+}

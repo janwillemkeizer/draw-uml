@@ -1,0 +1,13 @@
+{
+  "umlVersion": "2.5.1",
+  "diagramKind": "deployment",
+  "frame": { "kind": "dep", "name": "Production" },
+  "nodes": [
+    { "id": "host", "metaclass": "Device", "keyword": "device", "name": "appserver1 : Host", "x": 40, "y": 40, "width": 280, "height": 140 },
+    { "id": "jvm", "metaclass": "ExecutionEnvironment", "keyword": "executionEnvironment", "name": "jvm : JVM", "x": 70, "y": 90 },
+    { "id": "jar", "metaclass": "Artifact", "keyword": "artifact", "name": "loans.jar", "x": 400, "y": 100 }
+  ],
+  "edges": [
+    { "metaclass": "Deployment", "source": "jar", "target": "jvm", "keyword": "deploy" }
+  ]
+}

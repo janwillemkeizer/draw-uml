@@ -1,0 +1,20 @@
+{
+  "skill_name": "draw-uml",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Draw a UML class diagram of a library: Book, Copy, Member, Loan. Copies belong to a Book. A Loan links a Member to a Copy.",
+      "expected_output": "Annex A class diagram SVG. Composite aggregation diamond on Book toward Copy. Association ends named with multiplicities only where specified. No crow's-foot. Keywords only from Annex C. Frame kind pkg or class."
+    },
+    {
+      "id": 2,
+      "prompt": "Sequence diagram: a Member calls borrow(copy) on Circulation and gets a loan back.",
+      "expected_output": "Annex A sequence diagram. Frame heading sd. synchCall filled head, reply dashed open or filled head (17.4.4). Time downward."
+    },
+    {
+      "id": 3,
+      "prompt": "Use case diagram for a library with Member and Borrow copy including Identify member.",
+      "expected_output": "UseCase ellipses, Actor stick-man outside a subject rectangle. «include» dashed open arrow from Borrow copy to Identify member (18.1.4)."
+    }
+  ]
+}

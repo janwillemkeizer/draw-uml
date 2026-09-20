@@ -1,0 +1,12 @@
+{
+  "umlVersion": "2.5.1",
+  "diagramKind": "component",
+  "frame": { "kind": "cmp", "name": "Library" },
+  "nodes": [
+    { "id": "Catalog", "metaclass": "Component", "keyword": "component", "name": "Catalog", "x": 40, "y": 40 },
+    { "id": "ICatalog", "metaclass": "Interface", "keyword": "interface", "name": "ICatalog", "x": 300, "y": 48 }
+  ],
+  "edges": [
+    { "metaclass": "InterfaceRealization", "source": "Catalog", "target": "ICatalog" }
+  ]
+}

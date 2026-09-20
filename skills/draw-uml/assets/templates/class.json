@@ -1,0 +1,38 @@
+{
+  "umlVersion": "2.5.1",
+  "diagramKind": "class",
+  "frame": { "kind": "pkg", "name": "Library" },
+  "nodes": [
+    {
+      "id": "Book",
+      "metaclass": "Class",
+      "name": "Book",
+      "x": 40,
+      "y": 40,
+      "attributes": ["isbn : String", "/availableCopies : Integer {readOnly}"],
+      "operations": ["+ borrow() : Copy"]
+    },
+    {
+      "id": "Copy",
+      "metaclass": "Class",
+      "name": "Copy",
+      "x": 320,
+      "y": 40,
+      "attributes": ["barcode : String"]
+    }
+  ],
+  "edges": [
+    {
+      "metaclass": "Association",
+      "source": "Book",
+      "target": "Copy",
+      "name": "manifested as",
+      "sourceRole": "title",
+      "targetRole": "copy",
+      "sourceMultiplicity": "1",
+      "targetMultiplicity": "1..*",
+      "aggregation": "composite",
+      "aggregationOn": "source"
+    }
+  ]
+}

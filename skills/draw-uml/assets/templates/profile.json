@@ -1,0 +1,13 @@
+{
+  "umlVersion": "2.5.1",
+  "diagramKind": "profile",
+  "frame": { "kind": "pkg", "name": "EJB" },
+  "nodes": [
+    { "id": "EJB", "metaclass": "Profile", "keyword": "profile", "name": "EJB", "x": 40, "y": 40 },
+    { "id": "Bean", "metaclass": "Stereotype", "keyword": "Stereotype", "name": "Bean", "x": 40, "y": 180 },
+    { "id": "Class", "metaclass": "Class", "stereotypes": ["Metaclass"], "name": "Class", "x": 280, "y": 180 }
+  ],
+  "edges": [
+    { "metaclass": "Extension", "source": "Bean", "target": "Class" }
+  ]
+}

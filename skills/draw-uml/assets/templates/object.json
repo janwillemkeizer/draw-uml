@@ -1,0 +1,26 @@
+{
+  "umlVersion": "2.5.1",
+  "diagramKind": "object",
+  "frame": { "kind": "pkg", "name": "Library" },
+  "nodes": [
+    {
+      "id": "loan42",
+      "metaclass": "InstanceSpecification",
+      "name": "loan42 : Loan",
+      "x": 40,
+      "y": 40,
+      "slots": ["borrowedOn = 2026-03-12", "dueOn = 2026-04-09"]
+    },
+    {
+      "id": "copy7",
+      "metaclass": "InstanceSpecification",
+      "name": "c7 : Copy",
+      "x": 300,
+      "y": 48,
+      "slots": ["barcode = \"C-0007\""]
+    }
+  ],
+  "edges": [
+    { "metaclass": "Association", "source": "loan42", "target": "copy7", "targetRole": "item" }
+  ]
+}

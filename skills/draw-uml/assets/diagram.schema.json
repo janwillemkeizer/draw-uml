@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.omg.org/spec/UML/2.5.1#draw-uml-authoring",
+  "title": "UML 2.5.1 diagram authoring document",
+  "description": "Authoring encoding of UML 2.5.1 abstract syntax plus layout used to produce UML concrete syntax (SVG). This JSON is not UML notation.",
+  "type": "object",
+  "required": ["umlVersion", "diagramKind", "nodes"],
+  "additionalProperties": false,
+  "properties": {
+    "umlVersion": { "const": "2.5.1" },
+    "diagramKind": {
+      "type": "string",
+      "enum": [
+        "activity",
+        "class",
+        "communication",
+        "component",
+        "composite-structure",
+        "deployment",
+        "interaction-overview",
+        "object",
+        "package",
+        "profile",
+        "state-machine",
+        "sequence",
+        "timing",
+        "use-case"
+      ]
+    },
+    "frame": {
+      "type": "object",
+      "required": ["kind", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "activity",
+            "class",
+            "component",
+            "deployment",
+            "interaction",
+            "package",
+            "state machine",
+            "use case",
+            "act",
+            "cmp",
+            "dep",
+            "sd",
+            "pkg",
+            "stm",
+            "uc"
+          ]
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "parameters": { "type": "string" }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/node" }
+    },
+    "edges": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/edge" }
+    },
+    "comments": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/comment" }
+    }
+  },
+  "$defs": {
+    "point": {
+      "type": "object",
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" }
+      }
+    },
+    "node": {
+      "type": "object",
+      "required": ["id", "metaclass", "x", "y"],
+      "properties": {
+        "id": { "type": "string" },
+        "metaclass": { "type": "string" },
+        "name": { "type": "string" },
+        "keyword": { "type": "string" },
+        "stereotypes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "isAbstract": { "type": "boolean" },
+        "isActive": { "type": "boolean" },
+        "underline": { "type": "boolean" },
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "width": { "type": "number" },
+        "height": { "type": "number" },
+        "attributes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "operations": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "receptions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "literals": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "slots": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "extensionPoints": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "regions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "lifelineType": { "type": "string" },
+        "selector": { "type": "string" },
+        "headHeight": { "type": "number" },
+        "lifelineLength": { "type": "number" },
+        "compartment": { "type": "string" },
+        "guard": { "type": "string" },
+        "kind": { "type": "string" },
+        "subject": { "type": "boolean" }
+      }
+    },
+    "edge": {
+      "type": "object",
+      "required": ["metaclass", "source", "target"],
+      "properties": {
+        "id": { "type": "string" },
+        "metaclass": { "type": "string" },
+        "source": { "type": "string" },
+        "target": { "type": "string" },
+        "name": { "type": "string" },
+        "keyword": { "type": "string" },
+        "messageSort": {
+          "type": "string",
+          "enum": [
+            "synchCall",
+            "asynchCall",
+            "asynchSignal",
+            "createMessage",
+            "deleteMessage",
+            "reply"
+          ]
+        },
+        "sourceRole": { "type": "string" },
+        "targetRole": { "type": "string" },
+        "sourceMultiplicity": { "type": "string" },
+        "targetMultiplicity": { "type": "string" },
+        "sourceNavigable": { "type": "boolean" },
+        "targetNavigable": { "type": "boolean" },
+        "aggregation": {
+          "type": "string",
+          "enum": ["none", "shared", "composite"]
+        },
+        "aggregationOn": {
+          "type": "string",
+          "enum": ["source", "target"]
+        },
+        "sequenceExpression": { "type": "string" },
+        "guard": { "type": "string" },
+        "label": { "type": "string" },
+        "y": { "type": "number" }
+      }
+    },
+    "comment": {
+      "type": "object",
+      "required": ["body", "x", "y"],
+      "properties": {
+        "body": { "type": "string" },
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "width": { "type": "number" },
+        "height": { "type": "number" },
+        "annotated": { "type": "string" }
+      }
+    }
+  }
+}

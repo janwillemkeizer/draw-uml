@@ -1,0 +1,18 @@
+{
+  "umlVersion": "2.5.1",
+  "diagramKind": "activity",
+  "frame": { "kind": "act", "name": "Checkout" },
+  "nodes": [
+    { "id": "start", "metaclass": "InitialNode", "kind": "initial", "x": 120, "y": 30 },
+    { "id": "reserve", "metaclass": "Action", "name": "Reserve copy", "x": 50, "y": 80 },
+    { "id": "decide", "metaclass": "DecisionNode", "kind": "decision", "x": 120, "y": 160 },
+    { "id": "loan", "metaclass": "Action", "name": "Create loan", "x": 50, "y": 220 },
+    { "id": "end", "metaclass": "ActivityFinalNode", "kind": "activityFinal", "x": 120, "y": 300 }
+  ],
+  "edges": [
+    { "metaclass": "ControlFlow", "source": "start", "target": "reserve" },
+    { "metaclass": "ControlFlow", "source": "reserve", "target": "decide" },
+    { "metaclass": "ControlFlow", "source": "decide", "target": "loan", "guard": "[available]" },
+    { "metaclass": "ControlFlow", "source": "loan", "target": "end" }
+  ]
+}

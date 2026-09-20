@@ -1,0 +1,19 @@
+{
+  "umlVersion": "2.5.1",
+  "diagramKind": "communication",
+  "frame": { "kind": "sd", "name": "BorrowCopy" },
+  "nodes": [
+    { "id": "m", "metaclass": "Lifeline", "name": "m : Member", "x": 40, "y": 40, "lifelineLength": 0, "headHeight": 40 },
+    { "id": "desk", "metaclass": "Lifeline", "name": "desk : Circulation", "x": 280, "y": 40, "lifelineLength": 0, "headHeight": 40 }
+  ],
+  "edges": [
+    {
+      "metaclass": "Message",
+      "source": "m",
+      "target": "desk",
+      "messageSort": "synchCall",
+      "label": "borrow(copy)",
+      "sequenceExpression": "1:"
+    }
+  ]
+}

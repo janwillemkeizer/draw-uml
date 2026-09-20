@@ -1,0 +1,207 @@
+{
+  "umlVersion": "2.5.1",
+  "omgDocument": "formal/17-12-05",
+  "specUrl": "https://www.omg.org/spec/UML/2.5.1",
+  "annexA": {
+    "frameKindsLong": [
+      "activity",
+      "class",
+      "component",
+      "deployment",
+      "interaction",
+      "package",
+      "state machine",
+      "use case"
+    ],
+    "frameKindsShort": {
+      "act": "activity",
+      "cmp": "component",
+      "dep": "deployment",
+      "sd": "interaction",
+      "pkg": "package",
+      "stm": "state machine",
+      "uc": "use case"
+    },
+    "headingSyntax": "[<kind>]<name>[<parameters>]",
+    "diagramKinds": [
+      {
+        "name": "Activity Diagram",
+        "id": "activity",
+        "clause": "Activities (15)"
+      },
+      {
+        "name": "Class Diagram",
+        "id": "class",
+        "clause": "Structured Classifiers (11)"
+      },
+      {
+        "name": "Communication Diagram",
+        "id": "communication",
+        "clause": "Interactions (17)"
+      },
+      {
+        "name": "Component Diagram",
+        "id": "component",
+        "clause": "Structured Classifiers (11)"
+      },
+      {
+        "name": "Composite Structure Diagram",
+        "id": "composite-structure",
+        "clause": "Structured Classifiers (11)"
+      },
+      {
+        "name": "Deployment Diagram",
+        "id": "deployment",
+        "clause": "Deployments (19)"
+      },
+      {
+        "name": "Interaction Overview Diagram",
+        "id": "interaction-overview",
+        "clause": "Interactions (17)"
+      },
+      {
+        "name": "Object Diagram",
+        "id": "object",
+        "clause": "Classification (9)"
+      },
+      {
+        "name": "Package Diagram",
+        "id": "package",
+        "clause": "Packages (12)"
+      },
+      {
+        "name": "Profile Diagram",
+        "id": "profile",
+        "clause": "Packages (12)"
+      },
+      {
+        "name": "State Machine Diagram",
+        "id": "state-machine",
+        "clause": "State Machines (14)"
+      },
+      {
+        "name": "Sequence Diagram",
+        "id": "sequence",
+        "clause": "Interactions (17)"
+      },
+      {
+        "name": "Timing Diagram",
+        "id": "timing",
+        "clause": "Interactions (17)"
+      },
+      {
+        "name": "Use Case Diagram",
+        "id": "use-case",
+        "clause": "Use Cases (18)"
+      }
+    ]
+  },
+  "annexC": {
+    "guillemetsNote": "Keywords are always enclosed in guillemets («keyword»). Guillemets shall not be replaced by << >> except where the available character set does not include guillemets.",
+    "keywords": [
+      {"keyword": "abstraction", "metamodel": "Abstraction", "placement": "dashed-line label"},
+      {"keyword": "access", "metamodel": "PackageImport", "placement": "dashed-line label"},
+      {"keyword": "activity", "metamodel": "Activity", "placement": "box header"},
+      {"keyword": "actor", "metamodel": "Actor", "placement": "box header"},
+      {"keyword": "apply", "metamodel": "ProfileApplication", "placement": "dashed-line label"},
+      {"keyword": "artifact", "metamodel": "Artifact", "placement": "box header"},
+      {"keyword": "centralBuffer", "metamodel": "CentralBufferNode", "placement": "box header"},
+      {"keyword": "bind", "metamodel": "TemplateBinding", "placement": "dashed-line label"},
+      {"keyword": "collaboration", "metamodel": "Collaboration", "placement": "box header"},
+      {"keyword": "component", "metamodel": "Component", "placement": "box header"},
+      {"keyword": "datastore", "metamodel": "DataStoreNode", "placement": "box header"},
+      {"keyword": "dataType", "metamodel": "DataType", "placement": "box header"},
+      {"keyword": "decisionInput", "metamodel": "DecisionNode::decisionInput", "placement": "note label"},
+      {"keyword": "decisionInputFlow", "metamodel": "DecisionNode::decisionInputFlow", "placement": "line label"},
+      {"keyword": "deploy", "metamodel": "Deployment", "placement": "dashed-line label"},
+      {"keyword": "deployment spec", "metamodel": "DeploymentSpecification", "placement": "box header"},
+      {"keyword": "device", "metamodel": "Device", "placement": "box header"},
+      {"keyword": "element access", "metamodel": "ElementImport", "placement": "dashed-line label"},
+      {"keyword": "element import", "metamodel": "ElementImport", "placement": "dashed-line label"},
+      {"keyword": "enumeration", "metamodel": "Enumeration", "placement": "box header"},
+      {"keyword": "executionEnvironment", "metamodel": "ExecutionEnvironment", "placement": "box header"},
+      {"keyword": "extend", "metamodel": "Extend", "placement": "dashed-line label"},
+      {"keyword": "extended", "metamodel": "Region / StateMachine", "placement": "after name"},
+      {"keyword": "external", "metamodel": "ActivityPartition", "placement": "swimlane header"},
+      {"keyword": "final", "metamodel": "State::isLeaf", "placement": "after name"},
+      {"keyword": "flow", "metamodel": "InformationFlow", "placement": "dashed-line label"},
+      {"keyword": "import", "metamodel": "PackageImport", "placement": "dashed-line label"},
+      {"keyword": "include", "metamodel": "Include", "placement": "dashed-line label"},
+      {"keyword": "information", "metamodel": "InformationItem", "placement": "box header"},
+      {"keyword": "interface", "metamodel": "Interface", "placement": "box header"},
+      {"keyword": "iterative", "metamodel": "ExpansionRegion", "placement": "top left corner"},
+      {"keyword": "localPostcondition", "metamodel": "Action::localPrecondition", "placement": "box header"},
+      {"keyword": "localPrecondition", "metamodel": "Action::localPrecondition", "placement": "box header"},
+      {"keyword": "manifest", "metamodel": "Manifestation", "placement": "dashed-line label"},
+      {"keyword": "merge", "metamodel": "PackageMerge", "placement": "dashed-line label"},
+      {"keyword": "model", "metamodel": "Model", "placement": "box header"},
+      {"keyword": "multicast", "metamodel": "ObjectFlow", "placement": "line label"},
+      {"keyword": "multireceive", "metamodel": "ObjectFlow", "placement": "line label"},
+      {"keyword": "occurrence", "metamodel": "CollaborationUse", "placement": "dashed-line label"},
+      {"keyword": "parallel", "metamodel": "ExpansionRegion", "placement": "top left corner"},
+      {"keyword": "postcondition", "metamodel": "Behavior::postcondition", "placement": "box header"},
+      {"keyword": "protocol", "metamodel": "ProtocolStateMachine", "placement": "after name / box header"},
+      {"keyword": "precondition", "metamodel": "Behavior::precondition", "placement": "box header"},
+      {"keyword": "primitive", "metamodel": "PrimitiveType", "placement": "box header"},
+      {"keyword": "profile", "metamodel": "Profile", "placement": "box header"},
+      {"keyword": "reference", "metamodel": "ElementImport / PackageImport (Profile)", "placement": "dashed-line label"},
+      {"keyword": "representation", "metamodel": "InformationItem::represented", "placement": "dashed-line label"},
+      {"keyword": "selection", "metamodel": "ObjectFlow::selection", "placement": "note label"},
+      {"keyword": "signal", "metamodel": "Signal", "placement": "box header"},
+      {"keyword": "singleExecution", "metamodel": "Activity", "placement": "inside box"},
+      {"keyword": "statemachine", "metamodel": "StateMachine", "placement": "box header"},
+      {"keyword": "stream", "metamodel": "ExpansionRegion", "placement": "top left corner"},
+      {"keyword": "Stereotype", "metamodel": "Stereotype", "placement": "box header"},
+      {"keyword": "strict", "metamodel": "ProfileApplication", "placement": "dashed-line label"},
+      {"keyword": "structured", "metamodel": "StructuredActivityNode", "placement": "box header"},
+      {"keyword": "substitute", "metamodel": "Substitution", "placement": "dashed-line label"},
+      {"keyword": "transformation", "metamodel": "ObjectFlow::transformation", "placement": "note label"},
+      {"keyword": "use", "metamodel": "Usage", "placement": "dashed-line label"}
+    ]
+  },
+  "clause22": {
+    "stereotypes": [
+      "Auxiliary",
+      "BuildComponent",
+      "Call",
+      "Create",
+      "Derive",
+      "Destroy",
+      "Document",
+      "Entity",
+      "Executable",
+      "File",
+      "Focus",
+      "Framework",
+      "Implement",
+      "Implementation Class",
+      "Instantiate",
+      "Library",
+      "Metaclass",
+      "Metamodel",
+      "ModelLibrary",
+      "Process",
+      "Realization",
+      "Refine",
+      "Responsibility",
+      "Script",
+      "Send",
+      "Service",
+      "Source",
+      "Specification",
+      "Subsystem",
+      "SystemModel",
+      "Trace",
+      "Type",
+      "Utility"
+    ]
+  },
+  "messageSort": {
+    "asynchCall": "open arrow head, solid line",
+    "asynchSignal": "open arrow head, solid line",
+    "synchCall": "filled arrow head, solid line",
+    "reply": "dashed line with either an open or filled arrow head",
+    "createMessage": "dashed line with an open arrow head",
+    "deleteMessage": "must end in a DestructionOccurrenceSpecification"
+  }
+}

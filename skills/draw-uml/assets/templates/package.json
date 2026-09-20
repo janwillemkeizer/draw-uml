@@ -1,0 +1,12 @@
+{
+  "umlVersion": "2.5.1",
+  "diagramKind": "package",
+  "frame": { "kind": "pkg", "name": "LibrarySystem" },
+  "nodes": [
+    { "id": "Catalog", "metaclass": "Package", "name": "Catalog", "x": 40, "y": 40 },
+    { "id": "Loans", "metaclass": "Package", "name": "Loans", "x": 280, "y": 40 }
+  ],
+  "edges": [
+    { "metaclass": "PackageImport", "source": "Loans", "target": "Catalog", "keyword": "import" }
+  ]
+}
