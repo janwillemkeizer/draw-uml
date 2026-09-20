@@ -1,0 +1,16 @@
+{
+  "umlVersion": "2.5.1",
+  "diagramKind": "state-machine",
+  "frame": { "kind": "stm", "name": "Loan" },
+  "nodes": [
+    { "id": "ini", "metaclass": "Pseudostate", "kind": "initial", "x": 40, "y": 80 },
+    { "id": "OnLoan", "metaclass": "State", "name": "On loan", "x": 100, "y": 55 },
+    { "id": "Overdue", "metaclass": "State", "name": "Overdue", "x": 300, "y": 55 },
+    { "id": "fin", "metaclass": "FinalState", "kind": "final", "x": 500, "y": 80 }
+  ],
+  "edges": [
+    { "metaclass": "Transition", "source": "ini", "target": "OnLoan" },
+    { "metaclass": "Transition", "source": "OnLoan", "target": "Overdue", "label": "after(loanPeriod)" },
+    { "metaclass": "Transition", "source": "Overdue", "target": "fin", "label": "returned" }
+  ]
+}

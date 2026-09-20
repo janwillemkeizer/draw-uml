@@ -1,0 +1,15 @@
+{
+  "umlVersion": "2.5.1",
+  "diagramKind": "use-case",
+  "frame": { "kind": "uc", "name": "Library" },
+  "nodes": [
+    { "id": "subject", "metaclass": "Component", "stereotypes": ["Subsystem"], "name": "Library", "subject": true, "x": 140, "y": 20, "width": 280, "height": 220 },
+    { "id": "Borrow", "metaclass": "UseCase", "name": "Borrow copy", "x": 190, "y": 70 },
+    { "id": "Identify", "metaclass": "UseCase", "name": "Identify member", "x": 190, "y": 150 },
+    { "id": "Member", "metaclass": "Actor", "name": "Member", "x": 40, "y": 80 }
+  ],
+  "edges": [
+    { "metaclass": "Association", "source": "Member", "target": "Borrow" },
+    { "metaclass": "Include", "source": "Borrow", "target": "Identify", "keyword": "include" }
+  ]
+}

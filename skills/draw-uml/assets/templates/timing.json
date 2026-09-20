@@ -1,0 +1,9 @@
+{
+  "umlVersion": "2.5.1",
+  "diagramKind": "timing",
+  "frame": { "kind": "sd", "name": "LoanTiming" },
+  "nodes": [
+    { "id": "loan", "metaclass": "Lifeline", "name": "loan : Loan", "x": 40, "y": 40, "width": 420, "headHeight": 28, "lifelineLength": 80 }
+  ],
+  "edges": []
+}
