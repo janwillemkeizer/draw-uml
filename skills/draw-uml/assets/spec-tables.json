@@ -130,7 +130,7 @@
       {"keyword": "information", "metamodel": "InformationItem", "placement": "box header"},
       {"keyword": "interface", "metamodel": "Interface", "placement": "box header"},
       {"keyword": "iterative", "metamodel": "ExpansionRegion", "placement": "top left corner"},
-      {"keyword": "localPostcondition", "metamodel": "Action::localPrecondition", "placement": "box header"},
+      {"keyword": "localPostcondition", "metamodel": "Action::localPostcondition", "placement": "box header"},
       {"keyword": "localPrecondition", "metamodel": "Action::localPrecondition", "placement": "box header"},
       {"keyword": "manifest", "metamodel": "Manifestation", "placement": "dashed-line label"},
       {"keyword": "merge", "metamodel": "PackageMerge", "placement": "dashed-line label"},
